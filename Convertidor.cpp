@@ -31,7 +31,7 @@ int main(){
 		aux=aux/2;
 		bin=bin+dig*c;
 		c=c*10;	
-	}
+		}
 	printf("\n\n%d en Binario es %d",n,bin);
 	//Para Convertir de Decimal a Octal y Hexadecimal
     	int x;
@@ -77,7 +77,7 @@ int main(){
 			//Una vez convertido en decimal pasemos a octal y hexadecimal
 			x=octal;
 			printf("\n\n%d en Decimal es: %d",n,octal);
-		    printf("\n\n%d en Hexadecimal es: %X",n,x);	
+		    	printf("\n\n%d en Hexadecimal es: %X",n,x);	
 		   	
 		   	//una vez convertido en decimal pasemoslo a binario
 		   	c=1;
@@ -91,11 +91,34 @@ int main(){
 		   	  printf("\n\n%d en Binario es: %d",n,bin);	
 	   	    	
 	   	break;
+		case 4 :
+	   		//Caso 4 
+	   		//Trabajaremos con los Hexadecimales
+	   		printf("\n\n\tUsted a Seleccionado un numero Hexadecimal");
+		   	printf("\n\nIngrese el Numero\t:");
+		    	scanf("%X",&n);
+			//Una vez ingresado Hexadecimal pasemos a octal y hexadecimal
+			x=n;
+		    	printf("\n\n%X en Octal es:  %o ",n, x);
+		    	printf("\n\n%X en Decimal es es: %d ",n, x);
+		 //convertir de decimal a Binario
+			c=1;
+	    	aux=x;
+	    	while(aux>=1){
+			dig=aux%2;
+			aux=aux/2;
+			bin=bin+dig*c;
+			c=c*10;	
+		}
+            	printf("\n\n%X En binario es %d",n,bin);
+	        	break;
+	   		
+	   default: printf("\n\n\tOPCION INCORRECTA!!.");	
+		
+	}
+
+	getch();
 	
-=======
-	system("color a1");
-	printf("\n\nConvertidor");
-	printf("El codigo");
 >>>>>>> 5cca0236ca15af8442a7e70a9d64751367b714f3
 }
 	
